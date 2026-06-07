@@ -1,7 +1,7 @@
 [package]
 name = "spydir"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 description = "Check if files in a directory have changed."
 repository = "https://github.com/sophia-nl/spydir"
 readme = "README.md"
@@ -12,9 +12,9 @@ categories = ["command-line-utilities"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-chrono = "0.4.41"
-clap = { version = "4.5.38", features = ["derive"] }
+chrono = "0.4.45"
+clap = { version = "4.6.1", features = ["derive"] }
+digest-io = "0.1.0"
 exitcode = "1.1.2"
-md-5 = "0.10.6"
-num_cpus = "1.16.0"
+md-5 = "0.11.0"
 threadpool = "1.8.1"

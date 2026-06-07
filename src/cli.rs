@@ -11,13 +11,8 @@ pub struct Args {
 }
 
 fn parse_path(input: &str) -> Result<PathBuf, String> {
-    let mut path: PathBuf = PathBuf::from(input);
+    let path: PathBuf = PathBuf::from(input).components().collect();
     if path.is_dir() {
-        if input.ends_with('/') {
-            let mut input_string: String = input.to_owned();
-            input_string.pop();
-            path = PathBuf::from(input_string);
-        }
         Ok(path)
     } else {
         Err(format!("'{}' was not a valid directory path.", input))
